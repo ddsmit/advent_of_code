@@ -1,6 +1,6 @@
 import functools
 
-from data import get_file
+from file.data import get_file
 
 
 def sonnys_ultimate_question(

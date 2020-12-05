@@ -1,7 +1,7 @@
 import functools
 import collections
 
-from data import get_file
+from file import get_file
 
 
 def sonnys_ultimate_question(

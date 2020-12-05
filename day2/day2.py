@@ -1,5 +1,5 @@
 from collections import Counter
-from data import get_file
+from file.data import get_file
 
 def elfing_passwords(data, condition_func):
     return [

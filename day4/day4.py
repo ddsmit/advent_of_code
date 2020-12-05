@@ -1,4 +1,4 @@
-import data
+import file.data as file
 import re
 
 def height_check(value):
@@ -47,7 +47,7 @@ def validate_format(person):
     )
 
 
-data = data.get_file_raw('d4.txt')
+data = file.get_file_raw('d4.txt')
 
 
 people = [

@@ -1,6 +1,6 @@
 import itertools
 import functools
-from data import get_file
+from file.data import get_file
 
 def elfing_around(dataset, number_of_numbers, sum_target=2020):
     for num_set in itertools.product(*[dataset]*number_of_numbers):
