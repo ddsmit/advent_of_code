@@ -38,3 +38,25 @@ for key, value in rules_raw.items():
 
 print(rules)
 print(len(find_bag(rules)))
+
+def get_num_bags(rules, start_bag='shiny gold', total=0):
+    new_amount=0
+    for containing_bag, rule in rules.items():
+
+
+        if containing_bag == start_bag:
+            print(containing_bag, rule)
+            if len(rule) == 0:
+                return 1
+
+            for bag, qty in rule.items():
+                new_amount += qty*get_num_bags(rules, start_bag=bag, total=total)+qty
+                print(new_amount)
+                # total += new_amount
+    total += new_amount
+    return new_amount
+
+# print(sum([get_num_bags(rules, start_bag=bag,)*qty for bag, qty in rules['shiny gold'].items()]))
+print(get_num_bags(rules))
+print(sum(rules['shiny gold'].values()))
+print(get_num_bags(rules)+sum(rules['shiny gold'].values()))
